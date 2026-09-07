@@ -8,7 +8,7 @@ test.describe('OrangeHRM Dashboard Tests', () => {
         storageState: 'playwright/.auth/user.json'
     });
 
-    test('should be able to logout', async ({ page }) => {
+    test('should be able to logout in app', async ({ page }) => {
         const dashboardPage = new DashboardPage(page);
         const loginPage = new LoginPage(page);
 
