@@ -1,98 +1,83 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import { defineConfig, devices } from '@playwright/test';
-
-/**
- * Read environment variables from file.
- * https://github.com/motdotla/dotenv
- */
-// import dotenv from 'dotenv';
-// import path from 'path';
-// dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
   testDir: './tests',
-  // testMatch: '*.spec.ts',
-  /* Run tests in files sequentially to avoid race conditions and auth conflicts */
   fullyParallel: false,
-  /* Fail the build on CI if you accidentally left test.only in the source code. */
-  // forbidOnly: !!process.env.CI,
-  // /* Retry on CI only */
-  // retries: process.env.CI ? 1 : 0,
-  // /* Opt out of parallel tests on CI. */
-  // workers: process.env.CI ? 1 : undefined,
-  /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Timeout settings */
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 1 : 0,
+
+  // IMPORTANT: this suite authenticates as a single shared 'Admin' account
+  // on OrangeHRM's public demo. That demo enforces one active session per
+  // account, so running spec files concurrently (Playwright's default with
+  // workers > 1) causes different workers to repeatedly log each other out
+  // mid-run — which shows up as "Dashboard heading not found" / login-page
+  // failures scattered across every authenticated test. Force serial
+  // execution to keep one session alive for the whole run.
+  workers: 1,
+
+  reporter: [
+    ['html', { open: 'never', outputFolder: 'reports/html-report' }],
+    ['json', { outputFile: 'reports/results.json' }],
+    ['junit', { outputFile: 'reports/results.xml' }],
+    ['list'],
+  ],
+
   timeout: 60 * 1000,
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+  globalSetup: require.resolve('./utils/global-setup'),
+  globalTeardown: require.resolve('./utils/global-teardown'),
+
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
     baseURL: 'https://opensource-demo.orangehrmlive.com',
 
-    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    // 'retain-on-failure' instead of 'on-first-retry': with retries: 0
+    // locally, 'on-first-retry' would never actually capture a trace
+    // (there's no retry to trigger it on). This way `npx playwright
+    // show-trace` always has something to open after any failure.
+    trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
   },
 
-  /* Configure projects for major browsers */
   projects: [
     {
-      name:'setup',
+      name: 'setup',
       testDir: './tests',
       testMatch: /.*\.setup\.ts/,
     },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'],
-      storageState:'playwright/.auth/user.json'
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
     },
-      dependencies: ['setup']
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
     },
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'],
-    //   storageState:'playwright/.auth/user.json'
-    // },
-    //   dependencies: ['setup']
-    // }
-    // {
-    //   name: 'firefox',
-    //   use: { ...devices['Desktop Firefox'] },
-    // },
+    {
+      name: 'webkit',
+      use: {
+        ...devices['Desktop Safari'],
+        storageState: 'playwright/.auth/user.json',
+      },
+      dependencies: ['setup'],
+    },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
-
-    /* Test against mobile viewports. */
+    // Uncomment for mobile viewport coverage:
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
     // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
-
-    /* Test against branded browsers. */
-    // {
-    //   name: 'Microsoft Edge',
-    //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
-    // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
-  ]
-
-  /* Run your local dev server before starting the tests */
-  // webServer: {
-  //   command: 'npm run start',
-  //   url: 'http://localhost:3000',
-  //   reuseExistingServer: !process.env.CI,
-  // },
+  ],
 });

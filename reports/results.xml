@@ -1,0 +1,437 @@
+<testsuites id="" name="" tests="13" failures="3" skipped="0" errors="6" time="114.800471">
+<testsuite name="auth.setup.ts" timestamp="2026-09-09T17:41:37.274Z" hostname="setup" tests="1" failures="0" skipped="0" time="7.655" errors="0">
+<testcase name="authenticate" classname="auth.setup.ts" time="7.655">
+</testcase>
+</testsuite>
+<testsuite name="networkmock.spec.ts" timestamp="2026-09-09T17:41:37.274Z" hostname="chromium" tests="4" failures="1" skipped="0" time="22.322" errors="2">
+<testcase name="API Mocking tests @regression @integration › mocks a fruit and doesn&apos;t call api" classname="networkmock.spec.ts" time="7.939">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="Unexpected token &apos;&lt;&apos;, &quot;&lt;!DOCTYPE &quot;... is not valid JSON" type="SyntaxError">
+<![CDATA[  [chromium] › networkmock.spec.ts:4:7 › API Mocking tests @regression @integration › mocks a fruit and doesn't call api 
+
+    SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+
+      11 |   await expect(page.getByText('Strawberry')).toBeVisible();
+      12 |   const response = await page.request.get('https://dummy-site.com/api/v1/fruits');
+    > 13 |   const fruits = await response.json();
+         |                  ^
+      14 |
+      15 |   expect(fruits).toHaveLength(2);
+      16 |
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:13:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Request Interception › should capture request details" classname="networkmock.spec.ts" time="4.148">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\trace.zip]]
+]]>
+</system-out>
+<error message="page.evaluate: TypeError: Failed to execute &apos;fetch&apos; on &apos;Window&apos;: Failed to parse URL from /api/v1/fruits" type="Error">
+<![CDATA[  [chromium] › networkmock.spec.ts:25:5 › Request Interception › should capture request details ────
+
+    Error: page.evaluate: TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from /api/v1/fruits
+        at eval (eval at evaluate (:311:30), <anonymous>:2:13)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at eval (eval at evaluate (:311:30), <anonymous>:2:13)
+        at UtilityScript.evaluate (<anonymous>:313:16)
+        at UtilityScript.<anonymous> (<anonymous>:1:44)
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:42:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Network Timeout Handling › should simulate delayed response" classname="networkmock.spec.ts" time="5.054">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBeTruthy()" type="expect.toBeTruthy">
+<![CDATA[  [chromium] › networkmock.spec.ts:53:5 › Network Timeout Handling › should simulate delayed response 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      83 | const end = Date.now();
+      84 |
+    > 85 | expect(response.ok()).toBeTruthy();
+         |                       ^
+      86 | expect(end - start).toBeGreaterThan(9000);
+      87 |
+      88 | });
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:85:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Offline Mode › should fail api request in offline mode" classname="networkmock.spec.ts" time="5.181">
+</testcase>
+</testsuite>
+<testsuite name="networkmock.spec.ts" timestamp="2026-09-09T17:41:37.274Z" hostname="firefox" tests="4" failures="1" skipped="0" time="19.236" errors="2">
+<testcase name="API Mocking tests @regression @integration › mocks a fruit and doesn&apos;t call api" classname="networkmock.spec.ts" time="7.784">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\trace.zip]]
+]]>
+</system-out>
+<error message="Unexpected token &apos;&lt;&apos;, &quot;&lt;!DOCTYPE &quot;... is not valid JSON" type="SyntaxError">
+<![CDATA[  [firefox] › networkmock.spec.ts:4:7 › API Mocking tests @regression @integration › mocks a fruit and doesn't call api 
+
+    SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+
+      11 |   await expect(page.getByText('Strawberry')).toBeVisible();
+      12 |   const response = await page.request.get('https://dummy-site.com/api/v1/fruits');
+    > 13 |   const fruits = await response.json();
+         |                  ^
+      14 |
+      15 |   expect(fruits).toHaveLength(2);
+      16 |
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:13:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Request Interception › should capture request details" classname="networkmock.spec.ts" time="3.014">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\trace.zip]]
+]]>
+</system-out>
+<error message="page.evaluate: Window.fetch: /api/v1/fruits is not a valid URL." type="Error">
+<![CDATA[  [firefox] › networkmock.spec.ts:25:5 › Request Interception › should capture request details ─────
+
+    Error: page.evaluate: Window.fetch: /api/v1/fruits is not a valid URL.
+    @debugger eval code line 311 > eval:2:13
+    evaluate@debugger eval code:313:16
+    @debugger eval code:1:44
+    @debugger eval code:1:62
+
+        at @debugger eval code line 311 > eval:2:13
+        at evaluate@debugger eval code:313:16
+        at @debugger eval code:1:44
+        at @debugger eval code:1:62
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:42:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Network Timeout Handling › should simulate delayed response" classname="networkmock.spec.ts" time="3.641">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBeTruthy()" type="expect.toBeTruthy">
+<![CDATA[  [firefox] › networkmock.spec.ts:53:5 › Network Timeout Handling › should simulate delayed response 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      83 | const end = Date.now();
+      84 |
+    > 85 | expect(response.ok()).toBeTruthy();
+         |                       ^
+      86 | expect(end - start).toBeGreaterThan(9000);
+      87 |
+      88 | });
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:85:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Offline Mode › should fail api request in offline mode" classname="networkmock.spec.ts" time="4.797">
+</testcase>
+</testsuite>
+<testsuite name="networkmock.spec.ts" timestamp="2026-09-09T17:41:37.274Z" hostname="webkit" tests="4" failures="1" skipped="0" time="11.256" errors="2">
+<testcase name="API Mocking tests @regression @integration › mocks a fruit and doesn&apos;t call api" classname="networkmock.spec.ts" time="6.428">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\trace.zip]]
+]]>
+</system-out>
+<error message="Unexpected token &apos;&lt;&apos;, &quot;&lt;!DOCTYPE &quot;... is not valid JSON" type="SyntaxError">
+<![CDATA[  [webkit] › networkmock.spec.ts:4:7 › API Mocking tests @regression @integration › mocks a fruit and doesn't call api 
+
+    SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON
+
+      11 |   await expect(page.getByText('Strawberry')).toBeVisible();
+      12 |   const response = await page.request.get('https://dummy-site.com/api/v1/fruits');
+    > 13 |   const fruits = await response.json();
+         |                  ^
+      14 |
+      15 |   expect(fruits).toHaveLength(2);
+      16 |
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:13:18
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Request Interception › should capture request details" classname="networkmock.spec.ts" time="1.13">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\trace.zip]]
+]]>
+</system-out>
+<error message="page.evaluate: TypeError: URL is not valid or contains user credentials." type="Error">
+<![CDATA[  [webkit] › networkmock.spec.ts:25:5 › Request Interception › should capture request details ──────
+
+    Error: page.evaluate: TypeError: URL is not valid or contains user credentials.
+
+      40 | });
+      41 | await page.goto('data:text/html,<html></html>');
+    > 42 | await page.evaluate(async () => {
+         |            ^
+      43 | await fetch('/api/v1/fruits');
+      44 | });
+      45 | expect(requestMethod).toBe('GET');
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:42:12
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</error>
+</testcase>
+<testcase name="Network Timeout Handling › should simulate delayed response" classname="networkmock.spec.ts" time="2.112">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\test-failed-1.png]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\video.webm]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\error-context.md]]
+
+[[ATTACHMENT|..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toBeTruthy()" type="expect.toBeTruthy">
+<![CDATA[  [webkit] › networkmock.spec.ts:53:5 › Network Timeout Handling › should simulate delayed response 
+
+    Error: expect(received).toBeTruthy()
+
+    Received: false
+
+      83 | const end = Date.now();
+      84 |
+    > 85 | expect(response.ok()).toBeTruthy();
+         |                       ^
+      86 | expect(end - start).toBeGreaterThan(9000);
+      87 |
+      88 | });
+        at C:\Users\salunkepramod\source\repos\PlaywrightAdvance\tests\networkmock.spec.ts:85:23
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\trace.zip
+    Usage:
+
+        npx playwright show-trace ..\test-results\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Offline Mode › should fail api request in offline mode" classname="networkmock.spec.ts" time="1.586">
+</testcase>
+</testsuite>
+</testsuites>

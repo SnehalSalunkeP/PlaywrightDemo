@@ -1,0 +1,1042 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "networkmock.spec.ts"
+    ],
+    "configFile": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\playwright.config.ts",
+    "rootDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\utils\\global-setup.ts",
+    "globalTeardown": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\utils\\global-teardown.ts",
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/salunkepramod/source/repos/PlaywrightAdvance/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never",
+          "outputFolder": "reports/html-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/results.xml"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.62.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "auth.setup.ts",
+      "file": "auth.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "authenticate",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7655,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-09T17:41:38.235Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "17e3fe6f4d9d8bd79c6b-60f085b113a677673906",
+          "file": "auth.setup.ts",
+          "line": 7,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "networkmock.spec.ts",
+      "file": "networkmock.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "API Mocking tests @regression @integration",
+          "file": "networkmock.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "mocks a fruit and doesn't call api",
+              "ok": false,
+              "tags": [
+                "regression",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7939,
+                      "error": {
+                        "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+                        "stack": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 18,
+                          "line": 13
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 18,
+                            "line": 13
+                          },
+                          "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:41:48.544Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 18,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-1627ee01d36317f2a2a6",
+              "file": "networkmock.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "mocks a fruit and doesn't call api",
+              "ok": false,
+              "tags": [
+                "regression",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 7784,
+                      "error": {
+                        "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+                        "stack": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 18,
+                          "line": 13
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 18,
+                            "line": 13
+                          },
+                          "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:19.236Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 18,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-f4029800f897979b0c14",
+              "file": "networkmock.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "mocks a fruit and doesn't call api",
+              "ok": false,
+              "tags": [
+                "regression",
+                "integration"
+              ],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6428,
+                      "error": {
+                        "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON",
+                        "stack": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 18,
+                          "line": 13
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 18,
+                            "line": 13
+                          },
+                          "message": "SyntaxError: Unexpected token '<', \"<!DOCTYPE \"... is not valid JSON\n\n\u001b[0m \u001b[90m 11 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByText(\u001b[32m'Strawberry'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39m\u001b[36mget\u001b[39m(\u001b[32m'https://dummy-site.com/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m   \u001b[36mconst\u001b[39m fruits \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   expect(fruits)\u001b[33m.\u001b[39mtoHaveLength(\u001b[35m2\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:13:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:50.183Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-API-Mocking-te-5f09a--fruit-and-doesn-t-call-api-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 18,
+                        "line": 13
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-9a123376da7ce05eb234",
+              "file": "networkmock.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        },
+        {
+          "title": "Request Interception",
+          "file": "networkmock.spec.ts",
+          "line": 23,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should capture request details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 4148,
+                      "error": {
+                        "message": "Error: page.evaluate: TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from /api/v1/fruits\n    at eval (eval at evaluate (:311:30), <anonymous>:2:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)",
+                        "stack": "Error: page.evaluate: TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from /api/v1/fruits\n    at eval (eval at evaluate (:311:30), <anonymous>:2:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at eval (eval at evaluate (:311:30), <anonymous>:2:13)\n    at UtilityScript.evaluate (<anonymous>:313:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12",
+                        "location": {
+                          "file": "eval at evaluate (:311:30), <anonymous>",
+                          "column": 13,
+                          "line": 2
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "eval at evaluate (:311:30), <anonymous>",
+                            "column": 13,
+                            "line": 2
+                          },
+                          "message": "Error: page.evaluate: TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from /api/v1/fruits\n\u001b[2m    at eval (eval at evaluate (:311:30), <anonymous>:2:13)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:313:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at eval (eval at evaluate (:311:30), <anonymous>:2:13)\u001b[22m\n\u001b[2m    at UtilityScript.evaluate (<anonymous>:313:16)\u001b[22m\n\u001b[2m    at UtilityScript.<anonymous> (<anonymous>:1:44)\u001b[22m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:41:59.045Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "eval at evaluate (:311:30), <anonymous>",
+                        "column": 13,
+                        "line": 2
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-9930e1a13b321900b1ed",
+              "file": "networkmock.spec.ts",
+              "line": 25,
+              "column": 5
+            },
+            {
+              "title": "should capture request details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3014,
+                      "error": {
+                        "message": "Error: page.evaluate: Window.fetch: /api/v1/fruits is not a valid URL.\n@debugger eval code line 311 > eval:2:13\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n",
+                        "stack": "Error: page.evaluate: Window.fetch: /api/v1/fruits is not a valid URL.\n@debugger eval code line 311 > eval:2:13\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n\n    at @debugger eval code line 311 > eval:2:13\n    at evaluate@debugger eval code:313:16\n    at @debugger eval code:1:44\n    at @debugger eval code:1:62\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12",
+                        "location": {
+                          "file": "@debugger eval code line 311 > eval",
+                          "column": 13,
+                          "line": 2
+                        }
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "@debugger eval code line 311 > eval",
+                            "column": 13,
+                            "line": 2
+                          },
+                          "message": "Error: page.evaluate: Window.fetch: /api/v1/fruits is not a valid URL.\n@debugger eval code line 311 > eval:2:13\nevaluate@debugger eval code:313:16\n@debugger eval code:1:44\n@debugger eval code:1:62\n\n\u001b[2m    at @debugger eval code line 311 > eval:2:13\u001b[22m\n\u001b[2m    at evaluate@debugger eval code:313:16\u001b[22m\n\u001b[2m    at @debugger eval code:1:44\u001b[22m\n\u001b[2m    at @debugger eval code:1:62\u001b[22m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:30.721Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "@debugger eval code line 311 > eval",
+                        "column": 13,
+                        "line": 2
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-356ef0a0597d178c2368",
+              "file": "networkmock.spec.ts",
+              "line": 25,
+              "column": 5
+            },
+            {
+              "title": "should capture request details",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1130,
+                      "error": {
+                        "message": "Error: page.evaluate: TypeError: URL is not valid or contains user credentials.",
+                        "stack": "Error: page.evaluate: TypeError: URL is not valid or contains user credentials.\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 12,
+                          "line": 42
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 40 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'data:text/html,<html></html>'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m \u001b[36mawait\u001b[39m fetch(\u001b[32m'/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m expect(requestMethod)\u001b[33m.\u001b[39mtoBe(\u001b[32m'GET'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 12,
+                            "line": 42
+                          },
+                          "message": "Error: page.evaluate: TypeError: URL is not valid or contains user credentials.\n\n\u001b[0m \u001b[90m 40 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 41 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'data:text/html,<html></html>'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 42 |\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mevaluate(\u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m    |\u001b[39m            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 43 |\u001b[39m \u001b[36mawait\u001b[39m fetch(\u001b[32m'/api/v1/fruits'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 44 |\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 45 |\u001b[39m expect(requestMethod)\u001b[33m.\u001b[39mtoBe(\u001b[32m'GET'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:42:12\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:58.168Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Request-Interc-54bc8-uld-capture-request-details-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 12,
+                        "line": 42
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-e5a885f8c8df3ca8a939",
+              "file": "networkmock.spec.ts",
+              "line": 25,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Network Timeout Handling",
+          "file": "networkmock.spec.ts",
+          "line": 52,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should simulate delayed response",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 5054,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 23,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 23,
+                            "line": 85
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:05.166Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 23,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-48a5bcfc9880217e9fc6",
+              "file": "networkmock.spec.ts",
+              "line": 53,
+              "column": 5
+            },
+            {
+              "title": "should simulate delayed response",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3641,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 23,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 23,
+                            "line": 85
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:36.488Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-firefox\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 23,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-9633c4e14bb13cc2306a",
+              "file": "networkmock.spec.ts",
+              "line": 53,
+              "column": 5
+            },
+            {
+              "title": "should simulate delayed response",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 2112,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23",
+                        "location": {
+                          "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                          "column": 23,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                            "column": 23,
+                            "line": 85
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeTruthy\u001b[2m()\u001b[22m\n\nReceived: \u001b[31mfalse\u001b[39m\n\n\u001b[0m \u001b[90m 83 |\u001b[39m \u001b[36mconst\u001b[39m end \u001b[33m=\u001b[39m \u001b[33mDate\u001b[39m\u001b[33m.\u001b[39mnow()\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m expect(response\u001b[33m.\u001b[39mok())\u001b[33m.\u001b[39mtoBeTruthy()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m expect(end \u001b[33m-\u001b[39m start)\u001b[33m.\u001b[39mtoBeGreaterThan(\u001b[35m9000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 87 |\u001b[39m\n \u001b[90m 88 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts:85:23\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:43:00.086Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\test-results\\networkmock-Network-Timeou-324dc-d-simulate-delayed-response-webkit\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\salunkepramod\\source\\repos\\PlaywrightAdvance\\tests\\networkmock.spec.ts",
+                        "column": 23,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-5e14f67bafc9b562dc06",
+              "file": "networkmock.spec.ts",
+              "line": 53,
+              "column": 5
+            }
+          ]
+        },
+        {
+          "title": "Offline Mode",
+          "file": "networkmock.spec.ts",
+          "line": 92,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should fail api request in offline mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 5181,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:12.157Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-ecf7d862f150bcfbf1b1",
+              "file": "networkmock.spec.ts",
+              "line": 93,
+              "column": 5
+            },
+            {
+              "title": "should fail api request in offline mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 4797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:42:42.937Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-c85ef76d3c2a8d38035b",
+              "file": "networkmock.spec.ts",
+              "line": 93,
+              "column": 5
+            },
+            {
+              "title": "should fail api request in offline mode",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1586,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-09-09T17:43:02.994Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "746d1f708d27f5eddccf-a5e7c00917c7e31e4383",
+              "file": "networkmock.spec.ts",
+              "line": 93,
+              "column": 5
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-09T17:41:19.468Z",
+    "duration": 114800.471,
+    "expected": 4,
+    "skipped": 0,
+    "unexpected": 9,
+    "flaky": 0
+  }
+}

@@ -3,13 +3,26 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:integration": "playwright test --grep @integration",
+    "test:visual": "playwright test --grep @visual",
+    "test:update-snapshots": "playwright test --update-snapshots",
+    "report": "playwright show-report reports/html-report",
+    "trace": "playwright show-trace"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.62.1",
-    "@types/node": "^26.3.0"
+    "@types/node": "^26.3.0",
+    "dotenv": "^17.4.2"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.13.0"
   }
 }

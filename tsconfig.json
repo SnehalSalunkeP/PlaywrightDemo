@@ -11,5 +11,6 @@
     "noEmit": true,
     "ignoreDeprecations": "6.0"
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules", "playwright-report", "test-results"]
 }
